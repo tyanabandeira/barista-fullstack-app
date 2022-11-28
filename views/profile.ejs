@@ -1,0 +1,60 @@
+<%- include('partials/header') -%>
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+          <div>
+              <p><strong>Welcome, </strong><%= user.userName %></p>
+              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+          </div>
+      
+          <!-- PENDING ORDERS SECTION =================== -->
+          <section class="pending-orders">
+            <h3>Pending Orders</h3>
+            <%= if(ordersPending == 0) {%>
+              <h5>No orders at the moment!</h5>
+           <% } %>
+            <%= for(let i = 0; i < ordersPending.length; i++) {%>
+              <ul class="list-of-orders-pending">
+              <li>
+                <span>Customer Name: <%= ordersPending[i].customerName %></span>
+                <span>Order:<%= ordersPending[i].coffeeFlavor %></span>
+                <form action="/posts/completeOrders<%= ordersPending[i].id %>?_method=PUT" method="POST">
+                  <button class="btn btn-primary" type="submit">Completed</button>
+                </form>
+              </li>
+           <% } %>
+           </ul>
+          </section>
+
+      
+        <!-- COMPLETE ORDERS SECTION =================== -->
+      
+        <section class="pending-orders">
+          <h3>Complete Orders</h3>
+          <%= if(completeOrders == 0) {%>
+            <h5>All orders have been complete!</h5>
+         <% } %>
+
+          <%= for(let i = 0; i < completeOrders.length; i++) {%>
+            <ul class="list-of-complete-orders">
+            <li>
+              <span>Barista Name: <%= completeOrders[i].userName %></span>
+              <span>Order:<%= completeOrders[i].coffeeFlavor %></span>
+              <form action="/posts/deleteOrde/<%= completeOrders[i].id %>?_method=delete" method="POST">
+                <button class="btn btn-primary" type="submit">Done</button>
+              </form>
+            </li>
+         <% } %>
+         </ul>
+        </section>
+  </div>
+</div>
+<%- include('partials/footer') -%>    
+
+
+
+
+
+
+
+

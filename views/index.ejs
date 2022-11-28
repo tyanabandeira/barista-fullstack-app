@@ -1,0 +1,97 @@
+<%- include('partials/header') -%>
+
+<main class="container">
+    <div class="row justify-content-around mt-5">
+        <a href="/login" class="col-3 btn btn-primary"> Login</a>
+        <a href="/signup" class="col-3 btn btn-primary"> Signup</a>
+    </div>
+</main>
+    
+
+<div class="coffee-order-form">
+
+    <form action="/" method="POST" class="coffee-form">
+
+    <h3 class="title">Place Your Coffee Order</h3>
+
+<div class="mb-3">
+    <!-- <label for="exampleFormControlInput1" class="form-label">Customer Name</label> -->
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="customerName" placeholder="Customer Name....">
+  </div>
+  
+  <!-- <label for="exampleFormControlInput1" class="form-label">Coffee Size</label> -->
+  <!-- <select class="form-select" aria-label="Default select example" name="size">
+    <option selected>--</option> -->
+    <!-- <option value="small">Small</option>
+    <option value="medium">Medium</option>
+    <option value="large">Large</option>
+  </select>  -->
+
+  <!-- <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="typeOfCoffee" id="inlineRadio1" value="hot">
+    <label class="form-check-label" for="inlineRadio1">Hot</label>
+  </div>
+  <div class="form-check form-check-inline">
+    <input class="form-check-input" type="radio" name="typeOfCoffee" id="inlineRadio2" value="iced">
+    <label class="form-check-label" for="inlineRadio2">Iced</label>
+  </div> -->
+
+
+  <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
+    <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off" name="coffeeFlavor" value="french roast">
+    <label class="btn btn-outline-primary" for="btncheck1">French Roast</label>
+  
+    <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="off" name="coffeeFlavor"  value="mocha mint">
+    <label class="btn btn-outline-primary" for="btncheck2">Mocha Mint</label>
+  
+    <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off" name="coffeeFlavor"  value="cinnamon hazelnut">
+    <label class="btn btn-outline-primary" for="btncheck3">Cinnamon Hazelnut</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck4" autocomplete="off" name="coffeeFlavor"  value="pumpkin spice">
+    <label class="btn btn-outline-primary" for="btncheck4">Pumpkin Spice</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck5" autocomplete="off" name="coffeeFlavor"  value="swiss chocolate almond">
+    <label class="btn btn-outline-primary" for="btncheck5">Swiss Almond Chocolate</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck6" autocomplete="off" name="coffeeFlavor"  value="french vanilla">
+    <label class="btn btn-outline-primary" for="btncheck6">French Vanilla</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck7" autocomplete="off" name="coffeeFlavor"  value="snickerdoodle">
+    <label class="btn btn-outline-primary" for="btncheck7">Snickerdoodle</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off" name="coffeeFlavor"  value="brownie coffee crunch">
+    <label class="btn btn-outline-primary" for="btncheck8">Brownie Toffee Crunch</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off" name="coffeeFlavor"  value="vanilla chai tea">
+    <label class="btn btn-outline-primary" for="btncheck9">Vanilla Chai Tea</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck10" autocomplete="off" name="coffeeFlavor"  value="s'mores">
+    <label class="btn btn-outline-primary" for="btncheck10">S'mores</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck11" autocomplete="off" name="coffeeFlavor"  value="sugar cookie">
+    <label class="btn btn-outline-primary" for="btncheck11">Sugar Cookie</label>
+
+    <input type="checkbox" class="btn-check" id="btncheck12" autocomplete="off" name="coffeeFlavor"  value="maple cinnamon french toast">
+    <label class="btn btn-outline-primary" for="btncheck12">Maple Cinnamon French Toast</label>
+  </div>
+<!--   
+  <div class="btn-group-milk" role="group" aria-label="Basic radio toggle button group">
+    <input type="radio" class="btn-check" name="milk" id="btnradio1" value="soy" autocomplete="off" checked>
+    <label class="btn btn-outline-primary" for="btnradio1">Soy</label>
+  
+    <input type="radio" class="btn-check" name="milk" id="btnradio2" value="oat" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio2">Oat</label>
+  
+    <input type="radio" class="btn-check" name="milk" id="btnradio3" value="almond" autocomplete="off">
+    <label class="btn btn-outline-primary" for="btnradio3">Almond</label>
+  </div> -->
+
+  <div class="d-grid gap-2 col-6 mx-auto">
+    <button class="btn btn-primary" type="submit">Submit Order</button>
+  </div>
+
+</form>
+</div>
+
+
+<%- include('partials/footer') -%>
